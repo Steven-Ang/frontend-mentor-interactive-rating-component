@@ -19,51 +19,52 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-    <main class="card" aria-hidden="false">
-      <img class="icon-star" src="images/icon-star.svg" alt="Star" />
-      <section class="paragraph-section" arial-label="Paragraph section">
-        <h1>How did we do?</h1>
-        <p>
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
+    <main class="card">
+      <section class="card-content" aria-hidden="false">
+        <img class="icon-star" src="images/icon-star.svg" alt="2D star illustration" />
+        <section class="paragraph-section">
+          <h1>How did we do?</h1>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </section>
+        <form id="rating-form" novalidate>
+          <ul class="rating-buttons">
+            <li>
+              <button class="rating-button" name="rating" value="1">1</button>
+            </li>
+            <li>
+              <button class="rating-button" name="rating" value="2">2</button>
+            </li>
+            <li>
+              <button class="rating-button" name="rating" value="3">3</button>
+            </li>
+            <li>
+              <button class="rating-button" name="rating" value="4">4</button>
+            </li>
+            <li>
+              <button class="rating-button selected" name="rating" value="5">
+                5
+              </button>
+            </li>
+          </ul>
+          <button id="submit-button">Submit</button>
+        </form>
       </section>
-      <form id="rating-form" novalidate>
-        <ul class="rating-buttons">
-          <li>
-            <button class="rating-button" name="rating" value="1">1</button>
-          </li>
-          <li>
-            <button class="rating-button" name="rating" value="2">2</button>
-          </li>
-          <li>
-            <button class="rating-button" name="rating" value="3">3</button>
-          </li>
-          <li>
-            <button class="rating-button" name="rating" value="4">4</button>
-          </li>
-          <li>
-            <button class="rating-button selected" name="rating" value="5">
-              5
-            </button>
-          </li>
-        </ul>
-        <button id="submit-button">Submit</button>
-      </form>
-    </main>
-    <main class="card result hidden" aria-hidden="true">
-      <img src="images/illustration-thank-you.svg" alt="Feedback completed" />
-      <p class="outline-text">
-        You selected <span id="rating-result"></span> out of 5
-      </p>
-      <section class="paragraph-section" arial-label="Paragraph section">
-        <h1>Thank you!</h1>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don't hesitate to get in touch!
+      <section class="card-content result hidden" aria-hidden="true">
+        <img src="images/illustration-thank-you.svg" alt="Feedback completed" />
+        <p class="outline-text">
+          You selected <span id="rating-result"></span> out of 5
         </p>
+        <section class="paragraph-section">
+          <h1>Thank you!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </section>
       </section>
-    </main>
     <script src="main.js"></script>
   </body>
 </html>

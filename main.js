@@ -1,7 +1,7 @@
 const form = document.getElementById("rating-form");
 const ratingResult = document.getElementById("rating-result");
-const mainCard = document.querySelector(".card");
-const resultCard = document.querySelector(".card.result");
+const mainCardContent = document.querySelector(".card-content");
+const resultCardContent = document.querySelector(".card-content.result");
 const ratingButtons = document.querySelectorAll(".rating-button");
 
 for (let ratingButton of ratingButtons) {
@@ -22,11 +22,11 @@ const handleSubmit = (event) => {
 
   ratingResult.textContent = selectedRatingButton.value;
 
-  mainCard.classList.toggle("hidden");
-  mainCard.ariaHidden = "true";
+  mainCardContent.classList.toggle("hidden");
+  mainCardContent.ariaHidden = "true";
 
-  resultCard.classList.toggle("hidden");
-  resultCard.ariaHidden = "false";
+  resultCardContent.classList.toggle("hidden");
+  resultCardContent.ariaHidden = "false";
 };
 
 form.addEventListener("submit", handleSubmit);
