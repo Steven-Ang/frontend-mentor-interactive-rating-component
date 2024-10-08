@@ -1,0 +1,137 @@
+:root {
+  --primary: hsl(25, 97%, 53%);
+
+  --neutral-1: hsl(217, 12%, 63%);
+  --neutral-2: hsl(213, 19%, 18%);
+  --neutral-3: hsl(216, 12%, 8%);
+
+  --white: hsl(0, 0%, 100%);
+
+  --outline-background: hsla(0, 0%, 100%, 0.075);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 0.9375em;
+  height: 100vh;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--neutral-3);
+  min-height: 100%;
+  font-family: "Overpass", sans-serif;
+}
+
+h1 {
+  font-size: 1.9em;
+  font-weight: normal;
+  color: var(--white);
+}
+
+p {
+  color: var(--neutral-1);
+  line-height: 1.4;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background-color: var(--white);
+  padding: 1em;
+  cursor: pointer;
+  letter-spacing: 0.2ch;
+  font-weight: bold;
+  outline: transparent;
+}
+
+.rating-button {
+  background-color: var(--outline-background);
+  color: var(--neutral-1);
+  border-radius: 100%;
+  width: 3.4em;
+}
+
+.rating-button:is(:hover, :active, :focus, .selected),
+#submit-button:is(:hover, :active, .selected) {
+  color: var(--neutral-3);
+}
+
+.rating-button:is(:hover),
+#submit-button:is(:hover, :focus) {
+  background-color: var(--white);
+  transition: background-color 0.2s;
+}
+
+.rating-button:is(:active, .selected, :focus) {
+  background-color: var(--primary);
+  transition: background-color 0.2s;
+}
+
+#submit-button {
+  text-transform: uppercase;
+  border-radius: 5em;
+  background-color: var(--primary);
+}
+
+.card {
+  background-color: var(--neutral-2);
+  display: grid;
+  max-width: 26em;
+  border-radius: 1em;
+  padding: 2em;
+  gap: 2em;
+  margin: 0 2em;
+}
+
+.card.result {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2em 1.6em;
+}
+
+.rating-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 1.4em;
+}
+
+.outline-text {
+  background-color: var(--outline-background);
+  padding: 0.6em 1em 0.4em 1em;
+  color: var(--primary);
+  border-radius: 0.8em;
+  opacity: 0.65;
+}
+
+.icon-star {
+  padding: 1em;
+  background-color: var(--outline-background);
+  border-radius: 100%;
+}
+
+#rating-form {
+  display: grid;
+  gap: 1.6em;
+}
+
+.paragraph-section {
+  display: grid;
+  gap: 0.8em;
+}
+
+.card.hidden {
+  display: none;
+}
