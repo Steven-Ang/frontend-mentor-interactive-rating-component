@@ -89,10 +89,11 @@ button {
   background-color: var(--neutral-2);
   display: grid;
   max-width: 26em;
-  border-radius: 1em;
+  border-radius: 2em;
   padding: 2em;
   gap: 2em;
   margin: 0 2em;
+  min-height: 26.5em;
 }
 
 .card.result {
@@ -124,7 +125,7 @@ button {
 
 #rating-form {
   display: grid;
-  gap: 1.6em;
+  gap: 2em;
 }
 
 .paragraph-section {

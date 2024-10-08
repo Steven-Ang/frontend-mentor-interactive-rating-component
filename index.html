@@ -19,9 +19,9 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-    <article class="card" aria-hidden="false">
+    <main class="card" aria-hidden="false">
       <img class="icon-star" src="images/icon-star.svg" alt="Star" />
-      <section class="paragraph-section">
+      <section class="paragraph-section" arial-label="Paragraph section">
         <h1>How did we do?</h1>
         <p>
           Please let us know how we did with your support request. All feedback
@@ -43,25 +43,27 @@
             <button class="rating-button" name="rating" value="4">4</button>
           </li>
           <li>
-            <button class="rating-button" name="rating" value="5">5</button>
+            <button class="rating-button selected" name="rating" value="5">
+              5
+            </button>
           </li>
         </ul>
         <button id="submit-button">Submit</button>
       </form>
-    </article>
-    <article class="card result hidden" aria-hidden="true">
-      <img src="images/illustration-thank-you.svg" alt="Thank you" />
+    </main>
+    <main class="card result hidden" aria-hidden="true">
+      <img src="images/illustration-thank-you.svg" alt="Feedback completed" />
       <p class="outline-text">
         You selected <span id="rating-result"></span> out of 5
       </p>
-      <section class="paragraph-section">
+      <section class="paragraph-section" arial-label="Paragraph section">
         <h1>Thank you!</h1>
         <p>
           We appreciate you taking the time to give a rating. If you ever need
           more support, don't hesitate to get in touch!
         </p>
       </section>
-    </article>
+    </main>
     <script src="main.js"></script>
   </body>
 </html>
